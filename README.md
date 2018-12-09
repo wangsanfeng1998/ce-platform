@@ -35,6 +35,7 @@ For a quick script that does the meteor build and sets up the xcworkspace, see t
 3. Navigate to `../ce-platform-ios/ios/project` and run `pod install` to install needed dependencies. 
 
 ## Running relaxing-needs on the CE-Platform
+This script runs on the mongo shell and checks experiences with submissions for outdated experiences. It replaces the outdated experiences (outdated being defined as having currentTimestamp + timeToExpiration > time of first submission) with new detectors.
 1. Go to imports/api/testing/expiration.js in the Ryan-matt branch of this repository.
 2. Run meteor on ce-platform and when it is up and running, open a new terminal tab and open mongo shell with the 'meteor mongo' command.
 3. Copy-paste the expiration.js code into the terminal and call checkExperiences()
