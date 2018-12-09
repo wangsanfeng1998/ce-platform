@@ -34,6 +34,11 @@ For a quick script that does the meteor build and sets up the xcworkspace, see t
     3. *Note*: if this fails with an error saying that `EACCES: permission denied` for one of the Pods in ce-platform-ios, you should try removing or moving the folder `../ce-platform-ios` to start a fresh build.
 3. Navigate to `../ce-platform-ios/ios/project` and run `pod install` to install needed dependencies. 
 
+## Running relaxing-needs on the CE-Platform
+1. Go to imports/api/testing/expiration.js in the Ryan-matt branch of this repository.
+2. Run meteor on ce-platform and when it is up and running, open a new terminal tab and open mongo shell with the 'meteor mongo' command.
+3. Copy-paste the expiration.js code into the terminal and call checkExperiences()
+
 ### Creating an .ipa File
 #### Setup
 Exporting an iOS application as an `.ipa` file requires the `ceEnterpriseExport.sh` export script and `exportOptions.plist` export options plist. The former runs the Xcode cleaning, building, and archiving stages for enterprise export and uses the latter to sign the application. 
